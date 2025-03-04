@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Korean Police | Page 2</title>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- CSS styles -->
+    <style>
+      /* Root styles */
+      .container {
+        width: 1310px;
+        margin: 0 auto;
+      }
+
+      /* /Root styles */
+
+      /* Header section */
+      .header {
+        display: flex;
+        gap: 5px;
+        height: 72px;
+        margin-top: 15px;
+      }
+
+      .header .brand {
+        display: inline-block;
+        width: 72px;
+        height: 72px;
+      }
+
+      .header > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+      }
+
+      .header > div h2 {
+        font-size: 20px;
+        line-height: 0;
+        font-weight: bold;
+        color: #0d509e;
+      }
+
+      .header > div p {
+        font-size: 11px;
+        line-height: 0;
+        color: #242424;
+      }
+
+      .header .slogan {
+        height: 45px;
+        padding: 0 50px;
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+
+      /* /Header section */
+
+      /* Navigation section */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+        gap: 20px;
+        font-weight: 600;
+      }
+
+      .navbar ul {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        list-style: none;
+        gap: 30px;
+        width: 100%;
+        height: 40px;
+        background-color: #3376b8;
+        border-radius: 5px;
+      }
+
+      .navbar ul li a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .navbar ul li a:hover {
+        color: #ffbb00;
+      }
+
+      .navbar ul li a.active {
+        color: #ffbb00;
+      }
+
+      .flex__end {
+        margin-left: auto;
+        margin-right: 20px;
+      }
+
+      .navbar > a {
+        width: 100px;
+        height: 40px;
+        background-color: #33b83c;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: white;
+        border-radius: 5px;
+      }
+
+      /* /Navigation section */
+
+      /* Content section */
+      .content {
+        width: 100%;
+        gap: 20px;
+        display: flex;
+      }
+
+      .content__sidebar {
+        width: 280px;
+      }
+
+      .content__sidebar ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+        list-style: none;
+        padding: 0;
+        margin-top: 0;
+      }
+
+      .content__sidebar ul li {
+        width: 100%;
+        height: 27px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+      }
+      .content__sidebar ul li:hover {
+        background-color: #3376b888;
+      }
+
+      .content__sidebar ul li.active {
+        background-color: #3376b8;
+      }
+
+      .content__sidebar ul li.active a {
+        color: #ffbb00;
+      }
+      .content__sidebar ul li.active-hover {
+        background-color: #3376b888;
+        border-radius: 5px;
+      }
+
+      .content__sidebar ul li a {
+        text-decoration: none;
+        font-weight: bold;
+        color: black;
+        font-size: 14px;
+        border-bottom: 1px solid #3376b888;
+        height: 100%;
+        width: 96%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .content__content {
+        width: 100%;
+      }
+
+      .content__content > h1 {
+        line-height: 0;
+        text-align: center;
+      }
+
+      .content__content hr {
+        border: none;
+        height: 1px;
+        background-color: #0054a6;
+      }
+
+      .content__content > span {
+        display: block;
+        text-align: center;
+        font-weight: 600;
+      }
+
+      .content__content-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 25px;
+        color: white;
+        background-color: #3376b8;
+        padding: 5px;
+        border-radius: 5px;
+      }
+
+      .content__content form {
+        width: 100%;
+        margin-top: 20px;
+      }
+      .content__content form table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid #cfcfcf;
+      }
+      .tabel_menu_head {
+        width: 200px;
+        text-align: center;
+        background-color: #eaeaea;
+        font-weight: 600;
+      }
+      th {
+        width: 30%;
+      }
+      td {
+        padding: 5px;
+      }
+      .form-action {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        gap: 10px;
+        margin-top: 20px;
+      }
+      .form-action button {
+        height: 35px;
+        color: white;
+        background-color: #3376b8;
+        border: 0;
+        border-radius: 3px;
+      }
+      .form-action button span,
+      .form-action button i {
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+      .form-action button.save {
+        background-color: #33b83c;
+      }
+      .form-action button.red {
+        background-color: #ff0000b4;
+      }
+      /* /Content section */
+      .input_checkbox {
+        display: flex;
+      }
+
+      /* The container */
+      .container-input {
+        display: block;
+        width: 100px;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 2px;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      /* Hide the browser's default checkbox */
+      .container-input input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+
+      /* Create a custom checkbox */
+      .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        border-radius: 100%;
+        background-color: #eee;
+      }
+      .input_radio2 .checkmark {
+        border-radius: 0;
+      }
+      /* On mouse-over, add a grey background color */
+      .container-input:hover input ~ .checkmark {
+        background-color: #ccc;
+      }
+
+      /* When the checkbox is checked, add a blue background */
+      .container-input input:checked ~ .checkmark {
+        background-color: #3376b8;
+      }
+
+      /* Create the checkmark/indicator (hidden when not checked) */
+      .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+
+      /* Show the checkmark when checked */
+      .container-input input:checked ~ .checkmark:after {
+        display: block;
+      }
+
+      /* Style the checkmark/indicator */
+      .container-input .checkmark:after {
+        left: 7px;
+        top: 3px;
+        width: 3.5px;
+        height: 7px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+      .table_info {
+        background-color: #3376b898;
+        border-radius: 5px;
+        padding: 3px 4px;
+      }
+      .table-textarea textarea {
+        width: 344px;
+        border-radius: 5px;
+        background-color: #f5f5f5;
+        border: 0.2px solid rgb(163, 163, 163);
+        font-size: 10px;
+        padding: 5px;
+      }
+      .input_submit_div {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .input_submit label {
+        border: 1px solid rgb(163, 163, 163);
+        padding: 5px;
+        border-radius: 5px;
+      }
+      .input_submit label input {
+        width: 130px;
+        border: none;
+      }
+      .input_submit > span {
+        color: red;
+      }
+      .input_submit button {
+        padding: 5px;
+        color: white;
+        background-color: #0d509e;
+        border: none;
+        border-radius: 5px;
+      }
+      .payment_status p {
+        font-size: 12px;
+        font-weight: 600;
+      }
+      .payment_status p span {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header section -->
+    <div class="container">
+      <header class="header">
+        <img
+          src="https://lustrous-buttercream-7631ed.netlify.app/img/logo.png"
+          alt="Logo"
+          class="brand"
+        />
+        <div>
+          <h2>서울경찰청</h2>
+          <p>서울지방경찰청 초과근무 통합시스템</p>
+        </div>
+        <img
+          src="https://lustrous-buttercream-7631ed.netlify.app/img/slogan.png"
+          alt="Slogan"
+          class="slogan"
+        />
+      </header>
+    </div>
+    <!-- /Header section -->
+
+    <!-- Navigation section -->
+    <div class="container">
+      <nav class="navbar">
+        <ul>
+          <li>
+            <a href="">개인별 초과근무</a>
+          </li>
+          <li>
+            <a href="">초과근무 통계</a>
+          </li>
+          <li>
+            <a href="" class="active">관리자 메뉴</a>
+          </li>
+          <li>
+            <a href="">공지사항</a>
+          </li>
+          <li>
+            <a href="">동원 명령서</a>
+          </li>
+          <li class="flex__end">
+            <a href="">개발엔지니어님 반갑습니다</a>
+          </li>
+        </ul>
+        <a href="">로그아웃</a>
+      </nav>
+    </div>
+    <!-- /Navigation section -->
+
+    <!-- Content section -->
+    <div class="container">
+      <section class="content">
+        <div class="content__sidebar">
+          <ul>
+            <li class="active"><a href="">관리자 메뉴</a></li>
+            <li><a href="">직원정보 관리</a></li>
+            <li><a href="">명령서 대장</a></li>
+            <li class="active-hover"><a href="">일반 초과관리</a></li>
+            <li><a href="">현업 초과 관리</a></li>
+            <li><a href="">현업 일정관리</a></li>
+            <li><a href="">근무상황 관리</a></li>
+            <li><a href="">대응팀 관리</a></li>
+            <li><a href="">지문 인식 현황</a></li>
+          </ul>
+        </div>
+
+        <div class="content__content">
+          <h1>초과근무 수정</h1>
+          <hr />
+
+          <form action="">
+            <table>
+              <tbody>
+                <tr>
+                  <td class="tabel_menu_head">근무형태</td>
+                  <td class="input_checkbox">
+                    <div class="input_radio">
+                      <label class="container-input"
+                        >일과전
+                        <input type="radio" name="radio_1" />
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="container-input"
+                        >일과후
+                        <input type="radio" name="radio_1" checked="checked" />
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="container-input"
+                        >휴일
+                        <input type="radio" name="radio_1" />
+                        <span class="checkmark"></span>
+                      </label>
+                    </div>
+                    <div class="input_radio2">
+                      <label class="container-input"
+                        >일과전
+                        <input type="radio" name="radio_2" />
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="container-input"
+                        >일과후
+                        <input type="radio" name="radio_2" />
+                        <span class="checkmark"></span>
+                      </label>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tabel_menu_head">신청일시</td>
+                  <td><span>2025-01-01</span> <span>00:00</span></td>
+                </tr>
+                <tr>
+                  <td class="tabel_menu_head">근무일시</td>
+                  <td>
+                    <span class="table_info">2025-12-31 부터 18:00~21:00</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tabel_menu_head">인정시간</td>
+                  <td><span class="table_info">137 분</span></td>
+                </tr>
+                <tr>
+                  <td class="tabel_menu_head">근무내용</td>
+                  <td class="table-textarea">
+                    <textarea name="" rows="3" id="">
+ 금일 업무 정리 및 근평 대상자 최종 선정, 인력현황 작성</textarea
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tabel_menu_head">사후초과근무 사유</td>
+                  <td class="table-textarea">
+                    <textarea name="" rows="3" id=""></textarea>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="tabel_menu_head">결재자</td>
+                  <td class="input_submit_div">
+                    <div class="input_submit">
+                      <label for="">
+                        <span>1차:</span>
+                        <input type="text" value="경정 이승석" />
+                      </label>
+                      <span>*</span>
+                      <button>선택</button>
+                    </div>
+                    <div class="input_submit">
+                      <label for="">
+                        <span>2차:</span>
+                        <input type="text" value="" />
+                      </label>
+                      <span>*</span>
+                      <button>선택</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tabel_menu_head">결재 상태</td>
+                  <td class="payment_status">
+                    <p>초과 근무: <span>결재 완료</span></p>
+                    <p>사후감독자 확인서: <span>미신청</span></p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="form-action">
+              <button>
+                <i class="fa-regular fa-pen-to-square"></i>
+                <span>수정</span>
+              </button>
+
+              <button class="red">
+                <i class="fa-regular fa-trash-can"></i>
+                <span>삭제</span>
+              </button>
+
+              <button class="red">
+                <i class="fa-solid fa-fingerprint"></i>
+                <span>지문시간 초기화</span>
+              </button>
+
+              <button class="save">
+                <i class="fa-solid fa-xmark"></i>
+                <span>취소</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+    <!-- /Content section -->
+  </body>
+</html>

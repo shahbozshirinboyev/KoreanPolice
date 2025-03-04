@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Korean Police | Page 1</title>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- CSS styles -->
+    <style>
+      /* Root styles */
+      .container {
+        width: 1310px;
+        margin: 0 auto;
+      }
+
+      /* /Root styles */
+
+      /* Header section */
+      .header {
+        display: flex;
+        gap: 5px;
+        height: 72px;
+        margin-top: 15px;
+      }
+
+      .header .brand {
+        display: inline-block;
+        width: 72px;
+        height: 72px;
+      }
+
+      .header > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+      }
+
+      .header > div h2 {
+        font-size: 20px;
+        line-height: 0;
+        font-weight: bold;
+        color: #0d509e;
+      }
+
+      .header > div p {
+        font-size: 11px;
+        line-height: 0;
+        color: #242424;
+      }
+
+      .header .slogan {
+        height: 45px;
+        padding: 0 50px;
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+
+      /* /Header section */
+
+      /* Navigation section */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+        gap: 20px;
+        font-weight: 600;
+      }
+
+      .navbar ul {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        list-style: none;
+        gap: 30px;
+        width: 100%;
+        height: 40px;
+        background-color: #3376b8;
+        border-radius: 5px;
+      }
+
+      .navbar ul li a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .navbar ul li a:hover {
+        color: #ffbb00;
+      }
+
+      .navbar ul li a.active {
+        color: #ffbb00;
+      }
+
+      .flex__end {
+        margin-left: auto;
+        margin-right: 20px;
+      }
+
+      .navbar > a {
+        width: 100px;
+        height: 40px;
+        background-color: #33b83c;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: white;
+        border-radius: 5px;
+      }
+
+      /* /Navigation section */
+
+      /* Content section */
+      .content {
+        width: 100%;
+        gap: 20px;
+        display: flex;
+      }
+
+      .content__sidebar {
+        width: 280px;
+      }
+
+      .content__sidebar ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        list-style: none;
+        padding: 0;
+        margin-top: 0;
+      }
+
+      .content__sidebar ul li {
+        width: 100%;
+        height: 38px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #3376b888;
+        border-radius: 5px;
+      }
+
+      .content__sidebar ul li.active {
+        background-color: #3376b8;
+      }
+
+      .content__sidebar ul li.active a {
+        color: #ffbb00;
+      }
+
+      .content__sidebar ul li a {
+        text-decoration: none;
+        font-weight: bold;
+        color: black;
+        font-size: 14px;
+      }
+
+      .content__content {
+        width: 100%;
+      }
+
+      .content__content > h1 {
+        line-height: 0;
+        text-align: center;
+      }
+
+      .content__content hr {
+        border: none;
+        height: 1px;
+        background-color: #0054a6;
+      }
+
+      .content__content > span {
+        display: block;
+        text-align: center;
+        font-weight: 600;
+      }
+
+      .content__content-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+        height: 25px;
+        color: white;
+        background-color: #3376b8;
+        padding: 5px;
+        border-radius: 5px;
+      }
+
+      .content__content form {
+        width: 100%;
+        /* border: 1px solid red; */
+        margin-top: 20px;
+      }
+
+      .content__content form textarea {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        box-sizing: border-box;
+        border-color: #3376b8;
+        border-radius: 5px;
+      }
+      .form-action {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .form-action button {
+        height: 35px;
+        color: white;
+        background-color: #3376b8;
+        border: 0;
+        border-radius: 3px;
+      }
+      .form-action button span,
+      .form-action button i {
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+      .form-action button.save {
+        background-color: #33b83c;
+      }
+      /* /Content section */
+    </style>
+  </head>
+  <body>
+    <!-- Header section -->
+    <div class="container">
+      <header class="header">
+        <img
+          src="https://lustrous-buttercream-7631ed.netlify.app/img/logo.png"
+          alt="Logo"
+          class="brand"
+        />
+        <div>
+          <h2>서울경찰청</h2>
+          <p>서울지방경찰청 초과근무 통합시스템</p>
+        </div>
+        <img
+          src="https://lustrous-buttercream-7631ed.netlify.app/img/slogan.png"
+          alt="Slogan"
+          class="slogan"
+        />
+      </header>
+    </div>
+    <!-- /Header section -->
+
+    <!-- Navigation section -->
+    <div class="container">
+      <nav class="navbar">
+        <ul>
+          <li>
+            <a href="">개인별 초과근무</a>
+          </li>
+          <li>
+            <a href="">초과근무 통계</a>
+          </li>
+          <li>
+            <a href="">관리자 메뉴</a>
+          </li>
+          <li>
+            <a href="">공지사항</a>
+          </li>
+          <li>
+            <a href="">동원 명령서</a>
+          </li>
+          <li class="flex__end">
+            <a href="">개발엔지니어님 반갑습니다</a>
+          </li>
+        </ul>
+        <a href="">로그아웃</a>
+      </nav>
+    </div>
+    <!-- /Navigation section -->
+
+    <!-- Content section -->
+    <div class="container">
+      <section class="content">
+        <div class="content__sidebar">
+          <ul>
+            <li class="active"><a href="">일반업무</a></li>
+            <li><a href="">공지사항</a></li>
+          </ul>
+        </div>
+        <div class="content__content">
+          <h1>일반업무 - 공지사항</h1>
+          <hr />
+          <span
+            >WOT서버 (초과근무인식데이터수신) 프로그램이 업데이트가 되지 않을
+            경우</span
+          >
+
+          <div class="content__content-info">
+            <span>작성자 I 개발 엔지니어</span>
+            <span>24.02.2021 조회 : 500</span>
+          </div>
+
+          <form action="">
+            <textarea name="" id="" rows="25"></textarea>
+            <hr />
+            <hr />
+            <div class="form-action">
+              <div>
+                <button>
+                  <i class="fa-regular fa-floppy-disk"></i>
+                  <span>WOT_v555_20240101.zip</span>
+                  <i class="fa-regular fa-circle-down"></i>
+                </button>
+              </div>
+              <div>
+                <button class="save">
+                  <i class="fa-regular fa-clipboard"></i>
+                  <span>목록</span>
+                </button>
+                <button>
+                  <i class="fa-regular fa-pen-to-square"></i>
+                  <span>수정</span>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+    <!-- /Content section -->
+  </body>
+</html>

@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Korean Police | Page 5</title>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- CSS Styles -->
+    <style>
+      /* Root styles */
+      .container {
+        width: 1310px;
+        margin: 0 auto;
+      }
+
+      /* /Root styles */
+
+      /* Header section */
+      .header {
+        display: flex;
+        gap: 5px;
+        height: 72px;
+        margin-top: 15px;
+      }
+
+      .header .brand {
+        display: inline-block;
+        width: 72px;
+        height: 72px;
+      }
+
+      .header > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+      }
+
+      .header > div h2 {
+        font-size: 20px;
+        line-height: 0;
+        font-weight: bold;
+        color: #0d509e;
+      }
+
+      .header > div p {
+        font-size: 11px;
+        line-height: 0;
+        color: #242424;
+      }
+
+      .header .slogan {
+        height: 45px;
+        padding: 0 50px;
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+
+      /* /Header section */
+
+      /* Navigation section */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+        gap: 20px;
+        font-weight: 600;
+      }
+
+      .navbar ul {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        list-style: none;
+        gap: 30px;
+        width: 100%;
+        height: 40px;
+        background-color: #3376b8;
+        border-radius: 5px;
+      }
+
+      .navbar ul li a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .navbar ul li a:hover {
+        color: #ffbb00;
+      }
+
+      .navbar ul li a.active {
+        color: #ffbb00;
+      }
+
+      .flex__end {
+        margin-left: auto;
+        margin-right: 20px;
+      }
+
+      .navbar > a {
+        width: 100px;
+        height: 40px;
+        background-color: #33b83c;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: white;
+        border-radius: 5px;
+      }
+
+      /* /Navigation section */
+
+      /* Content */
+      .content {
+        width: 100%;
+        gap: 20px;
+        display: flex;
+      }
+
+      /* /Content */
+
+      /* Content Sidebar */
+      .content__sidebar {
+        width: 280px;
+      }
+
+      .content__sidebar ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+        list-style: none;
+        padding: 0;
+        margin-top: 0;
+      }
+
+      .content__sidebar ul li {
+        width: 100%;
+        height: 27px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+      }
+
+      .content__sidebar ul li:hover {
+        background-color: #3376b888;
+      }
+
+      .content__sidebar ul li.active {
+        background-color: #3376b8;
+      }
+
+      .content__sidebar ul li.active a {
+        color: #ffbb00;
+      }
+
+      .content__sidebar ul li.active-hover {
+        background-color: #3376b888;
+        border-radius: 5px;
+      }
+
+      .content__sidebar ul li a {
+        text-decoration: none;
+        font-weight: bold;
+        color: black;
+        font-size: 14px;
+        border-bottom: 1px solid #3376b888;
+        height: 100%;
+        width: 96%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* /Content Sidebar */
+
+      /* Main Content */
+      .content__content {
+        width: 100%;
+        text-align: center;
+      }
+
+      .content__content > h1 {
+        line-height: 0;
+        text-align: center;
+        color: #525252;
+      }
+      /* /Main Content */
+
+      /* Main Content Header */
+      .content_header_control {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .select_option {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0px;
+      }
+
+      .check_button {
+        border-radius: 5px;
+        width: 60px;
+        height: 30px;
+        font-size: 12px;
+        padding-left: 5px;
+        padding-right: 5px;
+        background-color: #3376b8;
+        color: white;
+        border: none;
+        margin-left: 10px;
+      }
+
+      .excel_button {
+        background-color: #33b83c;
+      }
+
+      .select_inputs {
+        display: flex;
+        gap: 0;
+      }
+
+      .select_inputs select {
+        height: 30px;
+        width: 150px;
+        padding: 5px;
+        border: 0px;
+        background-color: #3376b8;
+        color: white;
+        margin: 0;
+      }
+
+      .select_inputs option {
+        width: 150px;
+        background-color: #eaeaea;
+        color: black;
+      }
+
+      .date_inputs input {
+        height: 30px;
+        width: 150px;
+        padding-left: 5px;
+        padding-right: 5px;
+        border: 0px;
+        background-color: #c4c4c4;
+        color: #000000;
+        margin: 0;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+
+      .select_first {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+
+      .select_last {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+      /* /Main Content Header */
+
+      /* Table section styles */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 30px auto;
+        font-size: 13px;
+        font-weight: 600;
+      }
+
+      thead {
+        background-color: #3376b8;
+        color: white;
+      }
+
+      tbody tr:nth-child(odd) {
+        background-color: #eaeaea;
+      }
+
+      th,
+      td {
+        border: 1px solid #bdbdbd;
+        padding: 5px;
+        text-align: center;
+      }
+
+      table select {
+        border-radius: 3px;
+        padding: 4px 6px;
+      }
+      table .date {
+        background-color: white;
+        border: 0.5px solid black;
+        border-radius: 3px;
+        padding: 4px 6px;
+      }
+      table .time {
+        background-color: white;
+        border: 0.5px solid black;
+        border-radius: 3px;
+        padding: 2px 3px;
+      }
+      table td > input {
+        width: 85px;
+        height: 22px;
+        border-radius: 3px;
+      }
+
+      /* /Table section styles */
+
+      /* Table Actions */
+      .form-action {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        gap: 10px;
+        margin-top: 20px;
+      }
+
+      .form-action button {
+        width: 100px;
+        height: 30px;
+        font-size: 12px;
+        color: white;
+        background-color: #3376b8;
+        border: 0;
+        border-radius: 3px;
+      }
+
+      .form-action button.danger {
+        background-color: #ff0000;
+      }
+      /* /Table Actions */
+
+      /* Table Overal */
+      .overal_td {
+        display: flex;
+        gap: 10px;
+      }
+      .overal_td input {
+        height: 20px;
+        width: 160px;
+        background-color: #c3c3c3;
+        border-radius: 3px;
+        border: 0.3px solid black;
+      }
+      .overal_td span {
+        color: #ff0000;
+        font-weight: bold;
+      }
+      .overal_td button {
+        width: 60px;
+        height: 26px;
+        border: 0;
+        background-color: #3376b8;
+        font-size: bold;
+        color: white;
+        border-radius: 3px;
+        font-family: inherit;
+      }
+      .overal_td p {
+        line-height: 0;
+        color: #ff0000;
+        font-weight: bold;
+      }
+      /* /Table Overal */
+    </style>
+  </head>
+
+  <body>
+    <!-- Header section -->
+    <div class="container">
+      <header class="header">
+        <img
+          src="https://lustrous-buttercream-7631ed.netlify.app/img/logo.png"
+          alt="Logo"
+          class="brand"
+        />
+        <div>
+          <h2>서울경찰청</h2>
+          <p>서울지방경찰청 초과근무 통합시스템</p>
+        </div>
+        <img
+          src="https://lustrous-buttercream-7631ed.netlify.app/img/slogan.png"
+          alt="Slogan"
+          class="slogan"
+        />
+      </header>
+    </div>
+    <!-- /Header section -->
+
+    <!-- Navigation section -->
+    <div class="container">
+      <nav class="navbar">
+        <ul>
+          <li>
+            <a href="">개인별 초과근무</a>
+          </li>
+          <li>
+            <a href="">초과근무 통계</a>
+          </li>
+          <li>
+            <a href="" class="active">관리자 메뉴</a>
+          </li>
+          <li>
+            <a href="">공지사항</a>
+          </li>
+          <li>
+            <a href="">동원 명령서</a>
+          </li>
+          <li class="flex__end">
+            <a href="">개발엔지니어님 반갑습니다</a>
+          </li>
+        </ul>
+        <a href="">로그아웃</a>
+      </nav>
+    </div>
+    <!-- /Navigation section -->
+
+    <!-- Content section -->
+    <div class="container">
+      <section class="content">
+        <!-- Content Sidebar -->
+        <div class="content__sidebar">
+          <ul>
+            <li class="active"><a href="">관리자 메뉴</a></li>
+            <li><a href="">직원정보 관리</a></li>
+            <li><a href="">명령서 대장</a></li>
+            <li><a href="">일반 초과관리</a></li>
+            <li class="active-hover"><a href="">현업 초과 관리</a></li>
+            <li><a href="">현업 일정관리</a></li>
+            <li><a href="">근무상황 관리</a></li>
+            <li><a href="">대응팀 관리</a></li>
+            <li><a href="">지문 인식 현황</a></li>
+          </ul>
+        </div>
+        <!-- /Content Sidebar -->
+
+        <!-- Main Content -->
+        <div class="content__content">
+          <!-- Main Content Header -->
+          <h1>현업초과근무 등록</h1>
+          <div class="content_header_control">
+            <div class="select_option">
+              <div class="select_inputs">
+                <select name="" id="" class="select_first">
+                  <option value="">서울청</option>
+                  <option value="">Option 2</option>
+                  <option value="">Option 3</option>
+                  <option value="">Option 4</option>
+                </select>
+                <select name="" id="">
+                  <option value="">경무기획과</option>
+                  <option value="">Option 2</option>
+                  <option value="">Option 3</option>
+                  <option value="">Option 4</option>
+                </select>
+                <select name="" id="" class="select_last">
+                  <option value="">경무계</option>
+                  <option value="">Option 2</option>
+                  <option value="">Option 3</option>
+                  <option value="">Option 4</option>
+                </select>
+                <button class="check_button">조회</button>
+              </div>
+            </div>
+            <div class="select_option">
+              <div class="select_inputs">
+                <select name="" id="" class="select_first select_last">
+                  <option value="">경무담당(su777</option>
+                  <option value="">Option 2</option>
+                  <option value="">Option 3</option>
+                  <option value="">Option 4</option>
+                </select>
+              </div>
+              <button class="check_button excel_button">엑셀</button>
+            </div>
+          </div>
+          <!-- /Main Content Header -->
+
+          <table>
+            <thead>
+              <tr>
+                <th>이름</th>
+                <th>근무타입</th>
+                <th>근무일자</th>
+                <th>시작 시간</th>
+                <th>종료 시간</th>
+                <th>근무내용</th>
+                <th>관련근거</th>
+                <th>일정 (분)</th>
+                <th>야간 (분)</th>
+                <th>취소</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>경위 경무담당</td>
+                <td>
+                  <select name="" id="">
+                    <option value="">추가근무</option>
+                    <option value="">Option 2</option>
+                    <option value="">Option 3</option>
+                    <option value="">Option 4</option>
+                  </select>
+                </td>
+                <td>
+                  <span class="date">2025-01-01</span>
+                </td>
+                <td>
+                  <span class="time">6:30</span>
+                </td>
+                <td>
+                  <span class="time">6:30</span>
+                </td>
+                <td>
+                  <input type="text" />
+                </td>
+                <td>
+                  <input type="text" />
+                </td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>경위 경무담당</td>
+                <td>
+                  <select name="" id="">
+                    <option value="">추가근무</option>
+                    <option value="">Option 2</option>
+                    <option value="">Option 3</option>
+                    <option value="">Option 4</option>
+                  </select>
+                </td>
+                <td>
+                  <span class="date">2025-01-01</span>
+                </td>
+                <td>
+                  <span class="time">6:30</span>
+                </td>
+                <td>
+                  <span class="time">6:30</span>
+                </td>
+                <td>
+                  <input type="text" />
+                </td>
+                <td>
+                  <input type="text" />
+                </td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>경위 경무담당</td>
+                <td>
+                  <select name="" id="">
+                    <option value="">추가근무</option>
+                    <option value="">Option 2</option>
+                    <option value="">Option 3</option>
+                    <option value="">Option 4</option>
+                  </select>
+                </td>
+                <td>
+                  <span class="date">2025-01-01</span>
+                </td>
+                <td>
+                  <span class="time">6:30</span>
+                </td>
+                <td>
+                  <span class="time">6:30</span>
+                </td>
+                <td>
+                  <input type="text" />
+                </td>
+                <td>
+                  <input type="text" />
+                </td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>결재자</td>
+                <td>결재자</td>
+                <td colspan="8">
+                  <div class="overal_td">
+                    <input type="text" />
+                    <span>*</span>
+                    <button>선택</button>
+                    <p>
+                      근무내용과 관련근에 콤마(,)를 사용하시면 등록이 되지
+                      않습니다.
+                    </p>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- Table Actions -->
+          <div class="form-action">
+            <button>등록</button>
+            <button class="danger">뒤로</button>
+          </div>
+          <!-- /Table Actions -->
+        </div>
+        <!-- Main Content -->
+      </section>
+    </div>
+    <!-- /Content section -->
+  </body>
+</html>
