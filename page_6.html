@@ -200,10 +200,23 @@
         height: 1px;
         background-color: #0054a6;
       }
+
+      .content__content input {
+        height: 20px;
+        width: 150px;
+        padding: 5px;
+        border: 0px;
+        background-color: #c3c3c3;
+        color: black;
+        margin: 0;
+        border-radius: 3px;
+      }
+
       /* /Main Content */
 
       /* Main Content Header */
       .content_header_control {
+        margin-top: 20px;
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -278,53 +291,47 @@
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
       }
+
       /* /Main Content Header */
 
       /* Table section styles */
       table {
+        margin-top: 25px;
         width: 100%;
         border-collapse: collapse;
-        margin: 30px auto;
-        font-size: 13px;
-        font-weight: 600;
-      }
-
-      thead {
-        background-color: #3376b8;
-        color: white;
-      }
-
-      tbody tr:nth-child(odd) {
-        background-color: #eaeaea;
       }
 
       th,
       td {
-        border: 1px solid #bdbdbd;
-        padding: 5px;
+        border: 1px solid #ddd;
+        padding: 8px;
         text-align: center;
       }
 
-      table select {
-        border-radius: 3px;
-        padding: 4px 6px;
+      th {
+        background-color: #f2f2f2;
       }
-      table .date {
-        background-color: white;
-        border: 0.5px solid black;
-        border-radius: 3px;
-        padding: 4px 6px;
+
+      .date-row {
+        display: flex;
+        justify-content: space-around;
       }
-      table .time {
-        background-color: white;
-        border: 0.5px solid black;
-        border-radius: 3px;
-        padding: 2px 3px;
+
+      .date-row span {
+        width: 20px;
       }
-      table td > input {
-        width: 85px;
-        height: 22px;
-        border-radius: 3px;
+
+      .blue {
+        background-color: #e0f2fe;
+        color: #1976d2;
+      }
+
+      .dash {
+        color: #999;
+      }
+
+      .left-col {
+        text-align: left;
       }
 
       /* /Table section styles */
@@ -332,14 +339,14 @@
       /* Table Actions */
       .form-action {
         display: flex;
-        justify-content: end;
+        justify-content: space-between;
         align-items: center;
         gap: 10px;
         margin-top: 20px;
       }
 
       .form-action button {
-        width: 100px;
+        width: 87px;
         height: 30px;
         font-size: 12px;
         color: white;
@@ -348,9 +355,26 @@
         border-radius: 3px;
       }
 
-      .form-action button.danger {
-        background-color: #ff0000;
+      .form-action button i {
+        font-size: 14px;
       }
+
+      .form-action button.danger {
+        background-color: #e40000;
+      }
+
+      .form-action button.delete {
+        background-color: #2c2c2c;
+      }
+
+      .form-action button.delete_all {
+        background-color: #181818;
+      }
+
+      .form-action button.success {
+        background-color: #33b83c;
+      }
+
       /* /Table Actions */
 
       /* Table Overal */
@@ -358,6 +382,7 @@
         display: flex;
         gap: 10px;
       }
+
       .overal_td input {
         height: 20px;
         width: 160px;
@@ -365,10 +390,12 @@
         border-radius: 3px;
         border: 0.3px solid black;
       }
+
       .overal_td span {
         color: #ff0000;
         font-weight: bold;
       }
+
       .overal_td button {
         width: 60px;
         height: 26px;
@@ -379,11 +406,13 @@
         border-radius: 3px;
         font-family: inherit;
       }
+
       .overal_td p {
         line-height: 0;
         color: #ff0000;
         font-weight: bold;
       }
+
       /* /Table Overal */
     </style>
   </head>
@@ -461,143 +490,181 @@
         <div class="content__content">
           <!-- Main Content Header -->
           <h1>현업일정관리</h1>
-          <hr>
+          <hr />
           <div class="content_header_control">
             <div class="select_option">
               <div class="select_inputs">
-                <input type="month" name="" id="">
+                <input type="month" name="" id="" value="2025-02" />
                 <button class="check_button">검색</button>
                 <button class="check_button excel_button">Excel</button>
               </div>
             </div>
           </div>
           <!-- /Main Content Header -->
-
           <table>
-            <thead>
-              <tr>
-                <th>이름</th>
-                <th>근무타입</th>
-                <th>근무일자</th>
-                <th>시작 시간</th>
-                <th>종료 시간</th>
-                <th>근무내용</th>
-                <th>관련근거</th>
-                <th>일정 (분)</th>
-                <th>야간 (분)</th>
-                <th>취소</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>경위 경무담당</td>
-                <td>
-                  <select name="" id="">
-                    <option value="">추가근무</option>
-                    <option value="">Option 2</option>
-                    <option value="">Option 3</option>
-                    <option value="">Option 4</option>
-                  </select>
-                </td>
-                <td>
-                  <span class="date">2025-01-01</span>
-                </td>
-                <td>
-                  <span class="time">6:30</span>
-                </td>
-                <td>
-                  <span class="time">6:30</span>
-                </td>
-                <td>
-                  <input type="text" />
-                </td>
-                <td>
-                  <input type="text" />
-                </td>
-                <td>0</td>
-                <td>0</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>경위 경무담당</td>
-                <td>
-                  <select name="" id="">
-                    <option value="">추가근무</option>
-                    <option value="">Option 2</option>
-                    <option value="">Option 3</option>
-                    <option value="">Option 4</option>
-                  </select>
-                </td>
-                <td>
-                  <span class="date">2025-01-01</span>
-                </td>
-                <td>
-                  <span class="time">6:30</span>
-                </td>
-                <td>
-                  <span class="time">6:30</span>
-                </td>
-                <td>
-                  <input type="text" />
-                </td>
-                <td>
-                  <input type="text" />
-                </td>
-                <td>0</td>
-                <td>0</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>경위 경무담당</td>
-                <td>
-                  <select name="" id="">
-                    <option value="">추가근무</option>
-                    <option value="">Option 2</option>
-                    <option value="">Option 3</option>
-                    <option value="">Option 4</option>
-                  </select>
-                </td>
-                <td>
-                  <span class="date">2025-01-01</span>
-                </td>
-                <td>
-                  <span class="time">6:30</span>
-                </td>
-                <td>
-                  <span class="time">6:30</span>
-                </td>
-                <td>
-                  <input type="text" />
-                </td>
-                <td>
-                  <input type="text" />
-                </td>
-                <td>0</td>
-                <td>0</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>결재자</td>
-                <td>결재자</td>
-                <td colspan="8">
-                  <div class="overal_td">
-                    <input type="text" />
-                    <span>*</span>
-                    <button>선택</button>
-                    <p>
-                      근무내용과 관련근에 콤마(,)를 사용하시면 등록이 되지
-                      않습니다.
-                    </p>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
+            <tr>
+              <th rowspan="2">이름</th>
+              <th>1</th>
+              <th>2</th>
+              <th>3</th>
+              <th>4</th>
+              <th>5</th>
+              <th>6</th>
+              <th>7</th>
+              <th>8</th>
+              <th>9</th>
+              <th>10</th>
+              <th>11</th>
+              <th>12</th>
+              <th>13</th>
+              <th>14</th>
+              <th>15</th>
+              <th>16</th>
+              <th>17</th>
+              <th>18</th>
+              <th>19</th>
+              <th>20</th>
+              <th>21</th>
+              <th>22</th>
+              <th>23</th>
+              <th>24</th>
+              <th>25</th>
+              <th>26</th>
+              <th>27</th>
+              <th>28</th>
+            </tr>
+            <tr>
+              <th>토</th>
+              <th>일</th>
+              <th>월</th>
+              <th>화</th>
+              <th>수</th>
+              <th>목</th>
+              <th>금</th>
+              <th>토</th>
+              <th>일</th>
+              <th>월</th>
+              <th>화</th>
+              <th>수</th>
+              <th>목</th>
+              <th>금</th>
+              <th>토</th>
+              <th>일</th>
+              <th>월</th>
+              <th>화</th>
+              <th>수</th>
+              <th>목</th>
+              <th>금</th>
+              <th>토</th>
+              <th>일</th>
+              <th>월</th>
+              <th>화</th>
+              <th>수</th>
+              <th>목</th>
+              <th>금</th>
+            </tr>
+            <tr>
+              <th>
+                경무담 <br />
+                당
+              </th>
+              <td class="blue">
+                주 <br />
+                간
+              </td>
+              <td class="blue">
+                야 <br />
+                간
+              </td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <th>
+                전체등 <br />
+                록
+              </th>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
           </table>
-
           <!-- Table Actions -->
           <div class="form-action">
-            <button>등록</button>
-            <button class="danger">뒤로</button>
+            <div>
+              <button>주간</button>
+              <button class="danger">야간</button>
+              <button class="success">당직</button>
+              <button>비번</button>
+              <button class="danger">휴무</button>
+            </div>
+            <div>
+              <button class="delete">
+                <i class="fa-regular fa-trash-can"></i>&nbsp;&nbsp;
+                <span>삭제</span>
+              </button>
+              <button class="delete_all">
+                <i class="fa-solid fa-trash"></i>&nbsp;&nbsp;
+                <span>전체 삭제</span>
+              </button>
+              <button class="save">
+                <i class="fa-regular fa-floppy-disk"></i>&nbsp;&nbsp;
+                <span>저장</span>
+              </button>
+              <button class="danger">
+                <i class="fa-regular fa-circle-left"></i>&nbsp;&nbsp;
+                <span>뒤로</span>
+              </button>
+            </div>
           </div>
           <!-- /Table Actions -->
         </div>
