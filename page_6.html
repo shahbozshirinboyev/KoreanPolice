@@ -416,7 +416,7 @@
       }
       /* /Table Overal */
       .selected {
-        background-color: #d3d3d3;
+        background-color: #21b9ff;
       }
     </style>
   </head>
@@ -724,27 +724,27 @@
         });
 
         document.getElementById('day').addEventListener('click', function () {
-          updateCells('주간');
+          updateCells('주', '#3376b8');
         });
 
         document.getElementById('night').addEventListener('click', function () {
-          updateCells('야간');
+          updateCells('야', '#e40000');
         });
 
         document.getElementById('duty').addEventListener('click', function () {
-          updateCells('당직');
+          updateCells('당', '#33b83c');
         });
 
         document.getElementById('off').addEventListener('click', function () {
-          updateCells('비번');
+          updateCells('비', '#3376b8');
         });
 
         document.getElementById('holiday').addEventListener('click', function () {
-          updateCells('휴무');
+          updateCells('휴', '#e40000');
         });
 
         document.getElementById('delete').addEventListener('click', function () {
-          updateCells('-');
+          updateCells('-', '');
         });
 
         document.getElementById('delete_all').addEventListener('click', function () {
@@ -752,13 +752,15 @@
           cells.forEach(cell => {
             cell.textContent = '-';
             cell.classList.remove('selected');
+            cell.style.backgroundColor = '';
           });
           selectedCells = [];
         });
 
-        function updateCells(text) {
+        function updateCells(text, color) {
           selectedCells.forEach(cell => {
             cell.textContent = text;
+            cell.style.backgroundColor = color;
             cell.classList.remove('selected');
           });
           selectedCells = [];
@@ -772,5 +774,6 @@
         }
       });
     </script>
+
   </body>
 </html>
