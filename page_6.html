@@ -300,6 +300,7 @@
         width: 100%;
         border-collapse: collapse;
         font-size: 12px;
+        user-select: none;
       }
 
       th,
@@ -413,8 +414,10 @@
         color: #ff0000;
         font-weight: bold;
       }
-
       /* /Table Overal */
+      .selected {
+        background-color: #d3d3d3;
+      }
     </style>
   </head>
 
@@ -571,7 +574,10 @@
               <th>월</th>
             </tr>
             <tr>
-              <th> 경무담 <br /> 당 </th>
+              <th>
+                경무담 <br />
+                당
+              </th>
               <td>-</td>
               <td>-</td>
               <td>-</td>
@@ -605,7 +611,10 @@
               <td>-</td>
             </tr>
             <tr>
-              <th> 전체등 <br /> 록 </th>
+              <th>
+                전체등 <br />
+                록
+              </th>
               <td>-</td>
               <td>-</td>
               <td>-</td>
@@ -642,18 +651,18 @@
           <!-- Table Actions -->
           <div class="form-action">
             <div>
-              <button>주간</button>
-              <button class="danger">야간</button>
-              <button class="success">당직</button>
-              <button>비번</button>
-              <button class="danger">휴무</button>
+              <button id="day">주간</button>
+              <button id="night" class="danger">야간</button>
+              <button id="duty" class="success">당직</button>
+              <button id="off">비번</button>
+              <button id="holiday" class="danger">휴무</button>
             </div>
             <div>
-              <button class="delete">
+              <button id="delete" class="delete">
                 <i class="fa-regular fa-trash-can"></i>&nbsp;&nbsp;
                 <span>삭제</span>
               </button>
-              <button class="delete_all">
+              <button id="delete_all" class="delete_all">
                 <i class="fa-solid fa-trash"></i>&nbsp;&nbsp;
                 <span>전체 삭제</span>
               </button>
@@ -673,5 +682,95 @@
       </section>
     </div>
     <!-- /Content section -->
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const table = document.querySelector('table');
+        let selectedCells = [];
+        let isMouseDown = false;
+        let startCell = null;
+
+        table.addEventListener('mousedown', function (event) {
+          const cell = event.target.closest('td');
+          if (cell) {
+            isMouseDown = true;
+            startCell = cell;
+            clearSelection();
+            cell.classList.add('selected');
+            selectedCells.push(cell);
+          }
+        });
+
+        table.addEventListener('mouseover', function (event) {
+          if (isMouseDown) {
+            const cell = event.target.closest('td');
+            if (cell && cell !== startCell) {
+              cell.classList.add('selected');
+              if (!selectedCells.includes(cell)) {
+                selectedCells.push(cell);
+              }
+            }
+          }
+        });
+
+        table.addEventListener('mouseup', function () {
+          isMouseDown = false;
+          startCell = null;
+        });
+
+        document.addEventListener('mouseup', function () {
+          isMouseDown = false;
+          startCell = null;
+        });
+
+        document.getElementById('day').addEventListener('click', function () {
+          updateCells('주간');
+        });
+
+        document.getElementById('night').addEventListener('click', function () {
+          updateCells('야간');
+        });
+
+        document.getElementById('duty').addEventListener('click', function () {
+          updateCells('당직');
+        });
+
+        document.getElementById('off').addEventListener('click', function () {
+          updateCells('비번');
+        });
+
+        document.getElementById('holiday').addEventListener('click', function () {
+          updateCells('휴무');
+        });
+
+        document.getElementById('delete').addEventListener('click', function () {
+          updateCells('-');
+        });
+
+        document.getElementById('delete_all').addEventListener('click', function () {
+          const cells = table.querySelectorAll('td');
+          cells.forEach(cell => {
+            cell.textContent = '-';
+            cell.classList.remove('selected');
+          });
+          selectedCells = [];
+        });
+
+        function updateCells(text) {
+          selectedCells.forEach(cell => {
+            cell.textContent = text;
+            cell.classList.remove('selected');
+          });
+          selectedCells = [];
+        }
+
+        function clearSelection() {
+          selectedCells.forEach(cell => {
+            cell.classList.remove('selected');
+          });
+          selectedCells = [];
+        }
+      });
+    </script>
   </body>
 </html>
