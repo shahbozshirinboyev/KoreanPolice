@@ -417,6 +417,7 @@
       /* /Table Overal */
       .selected {
         background-color: #21b9ff;
+        outline: 1.5px solid #000000;
       }
     </style>
   </head>
@@ -761,9 +762,7 @@
           selectedCells.forEach(cell => {
             cell.textContent = text;
             cell.style.backgroundColor = color;
-            cell.classList.remove('selected');
           });
-          selectedCells = [];
         }
 
         function clearSelection() {
@@ -774,6 +773,5 @@
         }
       });
     </script>
-
   </body>
 </html>
