@@ -5,13 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Korean Police | Page New</title>
     <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- CSS Styles -->
     <style>
       /* Root styles */
@@ -19,7 +13,6 @@
         width: 1310px;
         margin: 0 auto;
       }
-
       /* /Root styles */
 
       /* Header section */
@@ -62,7 +55,6 @@
         margin-top: auto;
         margin-bottom: auto;
       }
-
       /* /Header section */
 
       /* Navigation section */
@@ -116,7 +108,6 @@
         color: white;
         border-radius: 5px;
       }
-
       /* /Navigation section */
 
       /* Content */
@@ -127,61 +118,6 @@
       }
 
       /* /Content */
-
-      /* Content Sidebar */
-      .content__sidebar {
-        width: 280px;
-      }
-
-      .content__sidebar ul {
-        display: flex;
-        flex-direction: column;
-        gap: 1px;
-        list-style: none;
-        padding: 0;
-        margin-top: 0;
-      }
-
-      .content__sidebar ul li {
-        width: 100%;
-        height: 27px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 5px;
-      }
-
-      .content__sidebar ul li:hover {
-        background-color: #3376b888;
-      }
-
-      .content__sidebar ul li.active {
-        background-color: #3376b8;
-      }
-
-      .content__sidebar ul li.active a {
-        color: #ffbb00;
-      }
-
-      .content__sidebar ul li.active-hover {
-        background-color: #3376b888;
-        border-radius: 5px;
-      }
-
-      .content__sidebar ul li a {
-        text-decoration: none;
-        font-weight: bold;
-        color: black;
-        font-size: 14px;
-        border-bottom: 1px solid #3376b888;
-        height: 100%;
-        width: 96%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      /* /Content Sidebar */
 
       /* Main Content */
       .content__content {
@@ -200,7 +136,6 @@
         height: 1px;
         background-color: #3376b8;
       }
-
       /* /Main Content */
 
       /* Main Content Header */
@@ -216,16 +151,30 @@
 
       .content__info {
         display: flex;
-        flex-direction: column;
         gap: 20px;
       }
+
+
+      .column {
+  flex: 1;
+   /* har bir ustun teng kenglikka ega bo'ladi */
+   display: flex;
+   flex-direction: column;
+  gap: 20px;
+}
+.column div{
+  width: 100%;
+  border: 1px solid red;
+  height: 200px;
+}
 
       .calendar-header {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: start;
         font-size: 18px;
         margin-bottom: 10px;
+        gap: 30px;
       }
 
       .calendar-header input {
@@ -234,7 +183,7 @@
         border-radius: 5px;
         padding-left: 10px;
         padding-right: 5px;
-        height: 30px;
+        height: 35px;
         background-color: #3376b8;
         color: white;
       }
@@ -245,12 +194,18 @@
         font-size: 12px;
       }
 
-      th,
-      td {
-        padding: 10px;
+      th, td {
         text-align: center;
         cursor: pointer;
         border: 1px solid #3376b8;
+      }
+
+      .month_info th, .month_info td {
+        padding: 5px;
+      }
+
+      .calendar_info th, .calendar_info td {
+        padding: 20px;
       }
 
       th {
@@ -293,7 +248,6 @@
       button.green {
         background-color: #008f0a;
       }
-
       /* /Main Content Header */
     </style>
   </head>
@@ -302,11 +256,7 @@
     <!-- Header section -->
     <div class="container">
       <header class="header">
-        <img
-          src="https://lustrous-buttercream-7631ed.netlify.app/img/logo.png"
-          alt="Logo"
-          class="brand"
-        />
+        <img src="https://lustrous-buttercream-7631ed.netlify.app/img/logo.png" alt="Logo" class="brand" />
         <div>
           <h2>서울경찰청</h2>
           <p>서울지방경찰청 초과근무 통합시스템</p>
@@ -351,138 +301,74 @@
     <!-- Content section -->
     <div class="container">
       <section class="content">
-        <!-- Content Sidebar -->
-        <div class="content__sidebar">
-          <ul>
-            <li class="active"><a href="">관리자 메뉴</a></li>
-            <li><a href="">직원정보 관리</a></li>
-            <li><a href="">명령서 대장</a></li>
-            <li class="active-hover"><a href="">일반 초과관리</a></li>
-            <li><a href="">현업 초과 관리</a></li>
-            <li><a href="">현업 일정관리</a></li>
-            <li><a href="">근무상황 관리</a></li>
-            <li><a href="">대응팀 관리</a></li>
-            <li><a href="">지문 인식 현황</a></li>
-          </ul>
-        </div>
-        <!-- /Content Sidebar -->
-
         <!-- Main Content -->
         <div class="content__content">
           <!-- Main Content Header -->
-          <h1>일반 초과관리</h1>
           <hr />
-
           <div class="content__data">
             <div class="calendar">
               <div class="calendar-header">
-                <button id="today">Today</button>
-                <div>
-                  <input type="month" id="monthPicker" />
-                  <button id="prevMonth">▲</button>
-                  <button id="nextMonth">▼</button>
-                </div>
+
+                <input type="month" id="monthPicker" />
+
+                <table class="month_info">
+                  <thead>
+                    <tr>
+                      <th>1</th>
+                      <th>2</th>
+                      <th>3</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>2</td>
+                      <td>3</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
-              <table>
+
+              <table class="calendar_info">
                 <thead>
                   <tr>
-                    <th>Su</th>
-                    <th>Mo</th>
-                    <th>Tu</th>
-                    <th>We</th>
-                    <th>Th</th>
-                    <th>Fr</th>
-                    <th>Sa</th>
+                    <th>일요일</th>
+                    <th>월요일</th>
+                    <th>화요일</th>
+                    <th>수요일</th>
+                    <th>목요일</th>
+                    <th>금요일</th>
+                    <th>토요일</th>
                   </tr>
                 </thead>
                 <tbody id="calendarBody"></tbody>
               </table>
+
             </div>
 
             <div class="content__info">
-              <table>
-                <thead>
-                  <tr>
-                    <th>№</th>
-                    <th>NAME</th>
-                    <th>STATUS</th>
-                    <th>DATE</th>
-                    <th>TIME</th>
-                    <th>FREE</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                  </tr>
-                </tbody>
-              </table>
-
-              <table>
-                <thead>
-                  <tr>
-                    <th>NAME</th>
-                    <th>ELEMENT</th>
-                    <th>DATA</th>
-                    <th>TIME</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>table_element</td>
-                    <td>table_element</td>
-                    <td>date</td>
-                    <td>time</td>
-                  </tr>
-                  <tr>
-                    <td>table_element</td>
-                    <td>table_element</td>
-                    <td>date</td>
-                    <td>time</td>
-                  </tr>
-                  <tr>
-                    <td>table_element</td>
-                    <td>table_element</td>
-                    <td>date</td>
-                    <td>time</td>
-                  </tr>
-                  <tr>
-                    <td>table_element</td>
-                    <td>table_element</td>
-                    <td>date</td>
-                    <td>time</td>
-                  </tr>
-                  <tr>
-                    <td>table_element</td>
-                    <td>table_element</td>
-                    <td>date</td>
-                    <td>time</td>
-                  </tr>
-                </tbody>
-              </table>
-
-              <div class="action_section">
-                <button class="red">Delete</button>
-                <button class="red">Delete All</button>
-                <button class="green">Add</button>
-                <button>Edit</button>
-                <button>Clear</button>
-                <button>Change</button>
+              <div class="column">
+                <div class="news">
+                  <h2>공지시항</h2>
+                  <div>
+                    <ul>
+                      <li>000000000000000000000000000000000000000000</li>
+                      <li>000000000000000000000000000000000000000000</li>
+                      <li>★4월3일 10시~14시 긴급점검★</li>
+                      <li>25. 4. 1. new시스템 도입</li>
+                    </ul>
+                  </div>
+                </div>
+                <div>
+                  
+                </div>
+              </div>
+              <div class="column">
+                <div></div>
+                <div></div>
               </div>
             </div>
+
           </div>
         </div>
         <!-- Main Content -->
@@ -492,86 +378,58 @@
 
     <!-- JS -->
     <script>
-      const calendarBody = document.getElementById("calendarBody");
-      const prevMonthBtn = document.getElementById("prevMonth");
-      const nextMonthBtn = document.getElementById("nextMonth");
-      const todayBtn = document.getElementById("today");
-      const monthPicker = document.getElementById("monthPicker");
+// Hozirgi sana va oyni olish
+const calendarBody = document.getElementById("calendarBody");
+const monthPicker = document.getElementById("monthPicker");
 
-      let currentDate = new Date();
-      let selectedDate = new Date();
+let currentDate = new Date();
 
-      monthPicker.value = currentDate.toISOString().slice(0, 7);
+// Kalendarni render qilish funksiyasi
+function renderCalendar(date) {
+  const year = date.getFullYear();
+  const month = date.getMonth();
 
-      function renderCalendar(date) {
-        calendarBody.innerHTML = "";
-        const year = date.getFullYear();
-        const month = date.getMonth();
+  // Oyning birinchi va oxirgi kunini olish
+  const firstDay = new Date(year, month, 1).getDay();
+  const lastDate = new Date(year, month + 1, 0).getDate();
 
-        monthPicker.value = `${year}-${String(month + 1).padStart(2, "0")}`;
+  // Kalendarni tozalash
+  calendarBody.innerHTML = "";
 
-        const firstDay = new Date(year, month, 1).getDay();
-        const lastDate = new Date(year, month + 1, 0).getDate();
+  // Kalendarni to'ldirish
+  let day = 1;
+  for (let i = 0; i < 6; i++) {
+    const row = document.createElement("tr");
 
-        let row = document.createElement("tr");
+    for (let j = 0; j < 7; j++) {
+      const cell = document.createElement("td");
 
-        for (let i = 0; i < firstDay; i++) {
-          row.appendChild(document.createElement("td"));
-        }
-
-        for (let day = 1; day <= lastDate; day++) {
-          const cell = document.createElement("td");
-          cell.textContent = day;
-
-          if (
-            selectedDate.getDate() === day &&
-            selectedDate.getMonth() === month &&
-            selectedDate.getFullYear() === year
-          ) {
-            cell.classList.add("selected");
-          }
-
-          cell.addEventListener("click", () => {
-            selectedDate = new Date(year, month, day);
-            renderCalendar(date);
-          });
-
-          row.appendChild(cell);
-
-          if ((firstDay + day) % 7 === 0) {
-            calendarBody.appendChild(row);
-            row = document.createElement("tr");
-          }
-        }
-
-        if (row.children.length > 0) {
-          calendarBody.appendChild(row);
-        }
+      if (i === 0 && j < firstDay) {
+        cell.textContent = ""; // Bo'sh hujayra
+      } else if (day > lastDate) {
+        cell.textContent = ""; // Bo'sh hujayra
+      } else {
+        cell.textContent = day; // Kunning raqami
+        day++;
       }
 
-      monthPicker.addEventListener("change", () => {
-        const [year, month] = monthPicker.value.split("-").map(Number);
-        currentDate = new Date(year, month - 1, 1);
-        renderCalendar(currentDate);
-      });
+      row.appendChild(cell);
+    }
 
-      prevMonthBtn.addEventListener("click", () => {
-        currentDate.setMonth(currentDate.getMonth() - 1);
-        renderCalendar(currentDate);
-      });
+    calendarBody.appendChild(row);
+  }
+}
 
-      nextMonthBtn.addEventListener("click", () => {
-        currentDate.setMonth(currentDate.getMonth() + 1);
-        renderCalendar(currentDate);
-      });
+// Oy o'zgarganda kalendarni yangilash
+monthPicker.addEventListener("change", () => {
+  const [year, month] = monthPicker.value.split("-").map(Number);
+  currentDate = new Date(year, month - 1, 1);
+  renderCalendar(currentDate);
+});
 
-      todayBtn.addEventListener("click", () => {
-        currentDate = new Date();
-        selectedDate = new Date();
-        renderCalendar(currentDate);
-      });
-
-      renderCalendar(currentDate);
+// Boshlang'ich qiymatni o'rnatish
+monthPicker.value = `${currentDate.getFullYear()}-${String(currentDate.getMonth() + 1).padStart(2, "0")}`;
+renderCalendar(currentDate);
     </script>
   </body>
 </html>
