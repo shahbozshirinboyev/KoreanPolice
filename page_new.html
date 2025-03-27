@@ -10,8 +10,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
       integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+      referrerpolicy="no-referrer" />
     <!-- CSS Styles -->
     <style>
       /* Root styles */
@@ -191,7 +190,7 @@
       table {
         width: 100%;
         border-collapse: collapse;
-        font-size: 12px;
+        font-size: 13px;
       }
 
       th,
@@ -208,7 +207,8 @@
 
       .calendar_info th,
       .calendar_info td {
-        padding: 20px;
+        padding: 25px;
+        text-align: start;
       }
 
       th {
@@ -254,30 +254,138 @@
       }
       /* /Main Content Header */
 
-      .news_block, .news_dataroom{
+      .news_block,
+      .news_dataroom,
+      .quick_action {
         border: 1px solid #3376b8;
         border-radius: 8px;
         text-align: start;
         padding: 10px;
       }
+      .quick_action {
+        background-color: #3376b8;
+      }
+      .news_block > h2,
+      .news_dataroom > h2 {
+        color: #3376b8;
+        font-size: 20px;
+        line-height: 15px;
+      }
+      .quick_action > h2 {
+        color: white;
+        font-size: 18px;
+        line-height: 15px;
+        text-align: center;
+      }
+      .quick_action > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 16px;
+      }
+      .quick_action button {
+        background-color: white;
+        color: #3376b8;
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: auto;
+      }
+      .quick_action button:hover {
+        background-color: #76bbff;
+        color: white;
+      }
 
-      .news_block ol, .news_dataroom ol {
+      .quick_action > div > div > img {
+        width: 60px;
+        height: 50px;
+        background-color: white;
+        /* padding: 10px; */
+        border-radius: 10px;
+        padding: 10px;
+        object-fit: contain;
+      }
+
+      .news_block ol,
+      .news_dataroom ol {
         padding: 0 15px;
       }
 
-      .news_block ol li, .news_dataroom ol li{
+      .news_block ol li,
+      .news_dataroom ol li {
         margin: 10px 0;
         max-width: 250px;
         white-space: nowrap;
         overflow: hidden;
         list-style-position: inside;
         text-overflow: ellipsis;
+        background-color: #e1eefc;
+        padding: 4px;
+        color: #0057ad;
+        border-radius: 5px;
+        cursor: pointer;
+        height: 20px;
       }
 
-      .column_1{
+      .quick_action2 {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .quick_action2 > div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
         border: 1px solid #3376b8;
-        border-radius: 8px;
         padding: 10px;
+        border-radius: 10px;
+      }
+      .quick_action2 > div > div > h2 {
+        color: #3376b8;
+        font-size: 18px;
+        line-height: 15px;
+      }
+      .quick_action2 > div > div {
+        display: flex;
+        text-align: start;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+      }
+      .quick_action2 > div > img {
+        width: 60px;
+      }
+      .quick_action2 button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+      .list-style-none {
+        list-style: none;
+      }
+      td.add1 {
+        background-color: #afd2f3;
+      }
+      td.add2 {
+        background-color: #fcccb1;
+      }
+
+      td.add3 {
+        background-color: #eef5c6;
+      }
+
+      td.add4 {
+        background-color: #ffb1b1;
+      }
+      td.add span {
+        font-size: 16px;
+        color: #0d509e;
       }
     </style>
   </head>
@@ -289,8 +397,7 @@
         <img
           src="https://lustrous-buttercream-7631ed.netlify.app/img/logo.png"
           alt="Logo"
-          class="brand"
-        />
+          class="brand" />
         <div>
           <h2>서울경찰청</h2>
           <p>서울지방경찰청 초과근무 통합시스템</p>
@@ -298,8 +405,7 @@
         <img
           src="https://lustrous-buttercream-7631ed.netlify.app/img/slogan.png"
           alt="Slogan"
-          class="slogan"
-        />
+          class="slogan" />
       </header>
     </div>
     <!-- /Header section -->
@@ -309,25 +415,25 @@
       <nav class="navbar">
         <ul>
           <li>
-            <a href="">개인별 초과근무</a>
+            <a href>개인별 초과근무</a>
           </li>
           <li>
-            <a href="">초과근무 통계</a>
+            <a href>초과근무 통계</a>
           </li>
           <li>
-            <a href="" class="active">관리자 메뉴</a>
+            <a href class="active">관리자 메뉴</a>
           </li>
           <li>
-            <a href="">공지사항</a>
+            <a href>공지사항</a>
           </li>
           <li>
-            <a href="">동원 명령서</a>
+            <a href>동원 명령서</a>
           </li>
           <li class="flex__end">
-            <a href="">개발엔지니어님 반갑습니다</a>
+            <a href>개발엔지니어님 반갑습니다</a>
           </li>
         </ul>
-        <a href="">로그아웃</a>
+        <a href>로그아웃</a>
       </nav>
     </div>
     <!-- /Navigation section -->
@@ -347,16 +453,16 @@
                 <table class="month_info">
                   <thead>
                     <tr>
-                      <th>1</th>
-                      <th>2</th>
-                      <th>3</th>
+                      <th>시간외 근무시간</th>
+                      <th>야간 시간</th>
+                      <th>통일 시간</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>1</td>
-                      <td>2</td>
-                      <td>3</td>
+                      <td>48시간</td>
+                      <td>12시간</td>
+                      <td>3일</td>
                     </tr>
                   </tbody>
                 </table>
@@ -374,18 +480,80 @@
                     <th>토요일</th>
                   </tr>
                 </thead>
-                <tbody id="calendarBody"></tbody>
+                <tbody id="calendarBody">
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="add add1">
+                      <b>1</b> <br />
+                      <span>주간</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="add add2">
+                      <b>2</b> <br />
+                      <span>야간</span>
+                    </td>
+                    <td class="add add3">
+                      <b>3</b> <br />
+                      <span>비번</span>
+                    </td>
+                    <td class="add add4">
+                      <b>4</b> <br />
+                      <span>휴무</span>
+                    </td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+                  </tr>
+
+                  <tr>
+                    <td>16</td>
+                    <td>17</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                    <td>21</td>
+                    <td>22</td>
+                  </tr>
+                  <tr>
+                    <td>23</td>
+                    <td>24</td>
+                    <td>25</td>
+                    <td>26</td>
+                    <td>27</td>
+                    <td>28</td>
+                    <td>29</td>
+                  </tr>
+                  <tr>
+                    <td>30</td>
+                    <td>31</td>
+                  </tr>
+                </tbody>
               </table>
             </div>
 
             <div class="content__info">
-
-              <div class="column column_1">
+              <div class="column">
                 <div class="news_block">
                   <h2>공지시항</h2>
 
                   <ol reversed>
-                    <li>000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</li>
+                    <li>000000000000000000000000000000000000000000</li>
                     <li>000000000000000000000000000000000000000000</li>
                     <li>★4월3일 10시~14시 긴급점검★</li>
                     <li>25. 4. 1. new시스템 도입</li>
@@ -393,50 +561,94 @@
                 </div>
 
                 <div class="news_dataroom">
-                  <h2>공지시항</h2>
+                  <h2>자료실</h2>
 
-                  <ol reversed>
-                    <li>000000000000000000000000000000000000000000</li>
-                    <li>000000000000000000000000000000000000000000</li>
-                    <li>★4월3일 10시~14시 긴급점검★</li>
-                    <li>25. 4. 1. new시스템 도입</li>
+                  <ol reversed class="list-style-none">
+                    <li>: 2025 공무원 보수등의 업무지침.pdf</li>
+                    <li>: 경찰청 초과근무 운영지침.pdf</li>
+                    <li>: 국가공무원 복무 징계등의 예규.pdf</li>
                   </ol>
                 </div>
               </div>
 
               <div class="column">
-                <div>
-                  <h2>Nimadur</h2>
+                <div class="quick_action">
+                  <h2>자주찾는 메뉴</h2>
                   <div>
                     <div>
-                      <img src="" alt="LOGO">
-                      <button>button</button>
+                      <img
+                        src="https://korean-police-123.netlify.app/png/1.png"
+                        alt="LOGO" />
+                      <button>
+                        <span>초과근무</span>
+                        <span>신청</span>
+                      </button>
                     </div>
                     <div>
-                      <img src="" alt="LOGO">
-                      <button>button</button>
+                      <img
+                        src="https://korean-police-123.netlify.app/png/2.png"
+                        alt="LOGO" />
+                      <button>
+                        <span>개인별</span>
+                        <span>통계</span>
+                      </button>
                     </div>
                     <div>
-                      <img src="" alt="LOGO">
-                      <button>button</button>
+                      <img
+                        src="https://korean-police-123.netlify.app/png/3.png"
+                        alt="LOGO" />
+                      <button>
+                        <span>근무상황</span>
+                        <span>관리</span>
+                      </button>
                     </div>
                   </div>
                 </div>
-                <div>
+                <div class="quick_action2">
                   <div>
                     <div>
-                      <h2>Nimalar ...</h2>
-                    <button>button</button>
+                      <h2>초과관리 시스템 문의</h2>
+                      <button>
+                        <span>바로가기</span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-arrow-right"
+                          viewBox="0 0 16 16">
+                          <path
+                            fill-rule="evenodd"
+                            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                        </svg>
+                      </button>
                     </div>
-                    <img src="" alt="LOGO">
+                    <img
+                      src="https://korean-police-123.netlify.app/png/4.png"
+                      alt="LOGO" />
                   </div>
 
                   <div>
                     <div>
-                      <h2>Nimalar ...</h2>
-                    <button>button</button>
+                      <h2>담당자 간 소통 창구</h2>
+                      <button>
+                        <span>바로가기</span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-arrow-right"
+                          viewBox="0 0 16 16">
+                          <path
+                            fill-rule="evenodd"
+                            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                        </svg>
+                      </button>
                     </div>
-                    <img src="" alt="LOGO">
+                    <img
+                      src="https://korean-police-123.netlify.app/png/4.png"
+                      alt="LOGO" />
                   </div>
                 </div>
               </div>
@@ -449,26 +661,21 @@
     <!-- /Content section -->
 
     <!-- JS -->
-    <script>
-      // Hozirgi sana va oyni olish
+    <!-- <script>
       const calendarBody = document.getElementById("calendarBody");
       const monthPicker = document.getElementById("monthPicker");
 
       let currentDate = new Date();
 
-      // Kalendarni render qilish funksiyasi
       function renderCalendar(date) {
         const year = date.getFullYear();
         const month = date.getMonth();
 
-        // Oyning birinchi va oxirgi kunini olish
         const firstDay = new Date(year, month, 1).getDay();
         const lastDate = new Date(year, month + 1, 0).getDate();
 
-        // Kalendarni tozalash
         calendarBody.innerHTML = "";
 
-        // Kalendarni to'ldirish
         let day = 1;
         for (let i = 0; i < 6; i++) {
           const row = document.createElement("tr");
@@ -477,11 +684,11 @@
             const cell = document.createElement("td");
 
             if (i === 0 && j < firstDay) {
-              cell.textContent = ""; // Bo'sh hujayra
+              cell.textContent = "";
             } else if (day > lastDate) {
-              cell.textContent = ""; // Bo'sh hujayra
+              cell.textContent = "";
             } else {
-              cell.textContent = day; // Kunning raqami
+              cell.textContent = day;
               day++;
             }
 
@@ -492,18 +699,16 @@
         }
       }
 
-      // Oy o'zgarganda kalendarni yangilash
       monthPicker.addEventListener("change", () => {
         const [year, month] = monthPicker.value.split("-").map(Number);
         currentDate = new Date(year, month - 1, 1);
         renderCalendar(currentDate);
       });
 
-      // Boshlang'ich qiymatni o'rnatish
       monthPicker.value = `${currentDate.getFullYear()}-${String(
         currentDate.getMonth() + 1
       ).padStart(2, "0")}`;
       renderCalendar(currentDate);
-    </script>
+    </script> -->
   </body>
 </html>
