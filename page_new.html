@@ -1,667 +1,797 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Korean Police | Page New</title>
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer" />
-    <!-- CSS Styles -->
-    <style>
-      /* Root styles */
-      .container {
-        width: 1310px;
-        margin: 0 auto;
-      }
-      /* /Root styles */
 
-      /* Header section */
-      .header {
-        display: flex;
-        gap: 5px;
-        height: 72px;
-        margin-top: 15px;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Korean Police | Page New</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- CSS Styles -->
+  <style>
+    /* Root styles */
+    .container {
+      width: 1310px;
+      margin: 0 auto;
+    }
 
-      .header .brand {
-        display: inline-block;
-        width: 72px;
-        height: 72px;
-      }
+    /* /Root styles */
 
-      .header > div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: start;
-      }
+    /* Header section */
+    .header {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      /* gap: 5px; */
+      height: 72px;
+      margin-top: 15px;
+    }
 
-      .header > div h2 {
-        font-size: 20px;
-        line-height: 0;
-        font-weight: bold;
-        color: #0d509e;
-      }
+    .margin-left-5 {
+      margin-left: 5px;
+    }
 
-      .header > div p {
-        font-size: 11px;
-        line-height: 0;
-        color: #242424;
-      }
+    .header .brand {
+      display: inline-block;
+      width: 72px;
+      height: 72px;
+    }
 
-      .header .slogan {
-        height: 45px;
-        padding: 0 50px;
-        margin-top: auto;
-        margin-bottom: auto;
-      }
-      /* /Header section */
+    .header>div {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: start;
+    }
 
-      /* Navigation section */
-      .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 20px;
-        gap: 20px;
-        font-weight: 600;
-      }
+    .header>div h2 {
+      font-size: 20px;
+      line-height: 0;
+      font-weight: bold;
+      color: #0d509e;
+    }
 
-      .navbar ul {
-        display: flex;
-        justify-content: start;
-        align-items: center;
-        list-style: none;
-        gap: 30px;
-        width: 100%;
-        height: 40px;
-        background-color: #3376b8;
-        border-radius: 5px;
-      }
+    .header>div p {
+      font-size: 11px;
+      line-height: 0;
+      color: #242424;
+    }
 
-      .navbar ul li a {
-        text-decoration: none;
-        color: white;
-      }
+    .header .slogan {
+      height: 45px;
+      padding: 0 50px;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
 
-      .navbar ul li a:hover {
-        color: #ffbb00;
-      }
+    /* /Header section */
 
-      .navbar ul li a.active {
-        color: #ffbb00;
-      }
+    /* Navigation section */
+    .navbar {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin-top: 20px;
+      /* gap: 20px; */
+      font-weight: 600;
+    }
 
-      .flex__end {
-        margin-left: auto;
-        margin-right: 20px;
-      }
+    .navbar_gap {
+      margin-left: 20px;
+    }
 
-      .navbar > a {
-        width: 100px;
-        height: 40px;
-        background-color: #33b83c;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-decoration: none;
-        color: white;
-        border-radius: 5px;
-      }
-      /* /Navigation section */
+    .navbar ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: start;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      list-style: none;
+      /* gap: 30px; */
+      width: 100%;
+      height: 40px;
+      background-color: #3376b8;
+      border-radius: 5px;
+    }
 
-      /* Content */
-      .content {
-        width: 100%;
-        gap: 20px;
-        display: flex;
-      }
+    .navbar_gap-ul {
+      margin-left: 30px;
+    }
 
-      /* /Content */
+    .navbar ul li a {
+      text-decoration: none;
+      color: white;
+    }
 
-      /* Main Content */
-      .content__content {
-        width: 100%;
-        text-align: center;
-      }
+    .navbar ul li a:hover {
+      color: #ffbb00;
+    }
 
-      .content__content > h1 {
-        line-height: 0;
-        text-align: center;
-        color: #525252;
-      }
+    .navbar ul li a.active {
+      color: #ffbb00;
+    }
 
-      .content__content hr {
-        border: none;
-        height: 1px;
-        background-color: #3376b8;
-      }
-      /* /Main Content */
+    .flex__end {
+      margin-left: auto;
+      margin-right: 20px;
+    }
 
-      /* Main Content Header */
-      .content__data {
-        margin-top: 25px;
-        display: flex;
-        gap: 20px;
-      }
+    .navbar>a {
+      width: 100px;
+      height: 40px;
+      background-color: #33b83c;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+      border-radius: 5px;
+    }
 
-      .content__data > div {
-        width: 50%;
-      }
+    /* /Navigation section */
 
-      .content__info {
-        display: flex;
-        gap: 20px;
-      }
+    /* Content */
+    .content {
+      width: 100%;
+      /* gap: 20px; */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
 
-      .column {
-        flex: 1;
-        /* har bir ustun teng kenglikka ega bo'ladi */
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-      }
+    .content_gap {
+      margin-left: 20px;
+    }
 
-      .calendar-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: start;
-        font-size: 18px;
-        margin-bottom: 10px;
-        gap: 30px;
-      }
+    /* /Content */
 
-      .calendar-header input {
-        width: 150px;
-        border: 0px solid #3376b8;
-        border-radius: 5px;
-        padding-left: 10px;
-        padding-right: 5px;
-        height: 35px;
-        background-color: #3376b8;
-        color: white;
-      }
+    /* Main Content */
+    .content__content {
+      width: 100%;
+      text-align: center;
+    }
 
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        font-size: 13px;
-      }
+    .content__content>h1 {
+      line-height: 0;
+      text-align: center;
+      color: #525252;
+    }
 
-      th,
-      td {
-        text-align: center;
-        cursor: pointer;
-        border: 1px solid #3376b8;
-      }
+    .content__content hr {
+      border: none;
+      height: 1px;
+      background-color: #3376b8;
+    }
 
-      .month_info th,
-      .month_info td {
-        padding: 5px;
-      }
+    /* /Main Content */
 
-      .calendar_info th,
-      .calendar_info td {
-        padding: 25px;
-        text-align: start;
-      }
+    /* Main Content Header */
+    .content__data {
+      margin-top: 25px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      /* gap: 20px; */
+    }
 
-      th {
-        background-color: #3376b834;
-      }
+    .content__data>div {
+      width: 50%;
+    }
 
-      td:hover {
-        background: #3376b834;
-      }
+    .content__info {
+      margin-left: 20px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      /* gap: 20px; */
+    }
 
-      tbody tr:nth-child(even) {
-        background-color: #3376b80c;
-      }
+    .margin-left-20 {
+      margin-left: 20px;
+    }
 
-      .selected {
-        background: #3376b8;
-        color: white;
-      }
+    .column {
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      /* har bir ustun teng kenglikka ega bo'ladi */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      /* gap: 10px; */
+    }
 
-      .action_section {
-        display: flex;
-        justify-content: end;
-        align-items: center;
-        gap: 15px;
-      }
+    .calendar-header {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: start;
+      font-size: 18px;
+      margin-bottom: 10px;
+      /* gap: 30px; */
+    }
 
-      button {
-        background-color: #3376b8;
-        height: 30px;
-        border: 0;
-        border-radius: 5px;
-        color: white;
-        padding: 5px 10px;
-        cursor: pointer;
-      }
+    .calendar-header input {
+      width: 150px;
+      border: 0px solid #3376b8;
+      border-radius: 5px;
+      padding-left: 10px;
+      padding-right: 5px;
+      height: 35px;
+      background-color: #3376b8;
+      color: white;
+    }
 
-      button.red {
-        background-color: #ff0000;
-      }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
 
-      button.green {
-        background-color: #008f0a;
-      }
-      /* /Main Content Header */
+    th,
+    td {
+      text-align: center;
+      cursor: pointer;
+      border: 1px solid #3376b8;
+    }
 
-      .news_block,
-      .news_dataroom,
-      .quick_action {
-        border: 1px solid #3376b8;
-        border-radius: 8px;
-        text-align: start;
-        padding: 10px;
-      }
-      .quick_action {
-        background-color: #3376b8;
-      }
-      .news_block > h2,
-      .news_dataroom > h2 {
-        color: #3376b8;
-        font-size: 20px;
-        line-height: 15px;
-      }
-      .quick_action > h2 {
-        color: white;
-        font-size: 18px;
-        line-height: 15px;
-        text-align: center;
-      }
-      .quick_action > div {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        padding: 16px;
-      }
-      .quick_action button {
-        background-color: white;
-        color: #3376b8;
-        font-size: 14px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 80px;
-        height: auto;
-      }
-      .quick_action button:hover {
-        background-color: #76bbff;
-        color: white;
-      }
+    .month_info {
+      width: 70%;
+      margin-left: 30px;
+    }
 
-      .quick_action > div > div > img {
-        width: 60px;
-        height: 50px;
-        background-color: white;
-        /* padding: 10px; */
-        border-radius: 10px;
-        padding: 10px;
-        object-fit: contain;
-      }
+    .month_info th,
+    .month_info td {
+      padding: 5px;
+    }
 
-      .news_block ol,
-      .news_dataroom ol {
-        padding: 0 15px;
-      }
+    .calendar_info th,
+    .calendar_info td {
+      padding: 25px;
+      text-align: start;
+    }
 
-      .news_block ol li,
-      .news_dataroom ol li {
-        margin: 10px 0;
-        max-width: 250px;
-        white-space: nowrap;
-        overflow: hidden;
-        list-style-position: inside;
-        text-overflow: ellipsis;
-        background-color: #e1eefc;
-        padding: 4px;
-        color: #0057ad;
-        border-radius: 5px;
-        cursor: pointer;
-        height: 20px;
-      }
+    th {
+      background-color: #3376b834;
+    }
 
-      .quick_action2 {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-      }
-      .quick_action2 > div {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 10px;
-        border: 1px solid #3376b8;
-        padding: 10px;
-        border-radius: 10px;
-      }
-      .quick_action2 > div > div > h2 {
-        color: #3376b8;
-        font-size: 18px;
-        line-height: 15px;
-      }
-      .quick_action2 > div > div {
-        display: flex;
-        text-align: start;
-        flex-direction: column;
-        justify-content: center;
-        align-items: start;
-      }
-      .quick_action2 > div > img {
-        width: 60px;
-      }
-      .quick_action2 button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-      }
-      .list-style-none {
-        list-style: none;
-      }
-      td.add1 {
-        background-color: #afd2f3;
-      }
-      td.add2 {
-        background-color: #fcccb1;
-      }
+    td:hover {
+      background: #3376b834;
+    }
 
-      td.add3 {
-        background-color: #eef5c6;
-      }
+    tbody tr:nth-child(even) {
+      background-color: #3376b80c;
+    }
 
-      td.add4 {
-        background-color: #ffb1b1;
-      }
-      td.add span {
-        font-size: 16px;
-        color: #0d509e;
-      }
-    </style>
-  </head>
+    .selected {
+      background: #3376b8;
+      color: white;
+    }
 
-  <body>
-    <!-- Header section -->
-    <div class="container">
-      <header class="header">
-        <img
-          src="https://lustrous-buttercream-7631ed.netlify.app/img/logo.png"
-          alt="Logo"
-          class="brand" />
-        <div>
-          <h2>서울경찰청</h2>
-          <p>서울지방경찰청 초과근무 통합시스템</p>
-        </div>
-        <img
-          src="https://lustrous-buttercream-7631ed.netlify.app/img/slogan.png"
-          alt="Slogan"
-          class="slogan" />
-      </header>
-    </div>
-    <!-- /Header section -->
+    .action_section {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: end;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      /* gap: 15px; */
+    }
 
-    <!-- Navigation section -->
-    <div class="container">
-      <nav class="navbar">
-        <ul>
-          <li>
-            <a href>개인별 초과근무</a>
-          </li>
-          <li>
-            <a href>초과근무 통계</a>
-          </li>
-          <li>
-            <a href class="active">관리자 메뉴</a>
-          </li>
-          <li>
-            <a href>공지사항</a>
-          </li>
-          <li>
-            <a href>동원 명령서</a>
-          </li>
-          <li class="flex__end">
-            <a href>개발엔지니어님 반갑습니다</a>
-          </li>
-        </ul>
-        <a href>로그아웃</a>
-      </nav>
-    </div>
-    <!-- /Navigation section -->
+    button {
+      background-color: #3376b8;
+      height: 30px;
+      border: 0;
+      border-radius: 5px;
+      color: white;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
 
-    <!-- Content section -->
-    <div class="container">
-      <section class="content">
-        <!-- Main Content -->
-        <div class="content__content">
-          <!-- Main Content Header -->
-          <hr />
-          <div class="content__data">
-            <div class="calendar">
-              <div class="calendar-header">
-                <input type="month" id="monthPicker" />
+    button.red {
+      background-color: #ff0000;
+    }
 
-                <table class="month_info">
-                  <thead>
-                    <tr>
-                      <th>시간외 근무시간</th>
-                      <th>야간 시간</th>
-                      <th>통일 시간</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>48시간</td>
-                      <td>12시간</td>
-                      <td>3일</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+    button.green {
+      background-color: #008f0a;
+    }
 
-              <table class="calendar_info">
+    /* /Main Content Header */
+
+    .news_dataroom,
+    .quick_action2 {
+      margin-top: 10px;
+    }
+
+    .news_block,
+    .news_dataroom,
+    .quick_action {
+      border: 1px solid #3376b8;
+      border-radius: 8px;
+      text-align: start;
+      padding: 10px;
+    }
+
+    .quick_action {
+      background-color: #3376b8;
+    }
+
+    .news_block>h2,
+    .news_dataroom>h2 {
+      color: #3376b8;
+      font-size: 20px;
+      line-height: 15px;
+    }
+
+    .quick_action>h2 {
+      color: white;
+      font-size: 18px;
+      line-height: 15px;
+      text-align: center;
+    }
+
+    .quick_action>div {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      /* gap: 10px; */
+      padding: 16px;
+    }
+
+    .margin-left-10 {
+      margin-left: 10px;
+    }
+
+    .quick_action button {
+      background-color: white;
+      color: #3376b8;
+      font-size: 14px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      width: 80px;
+      height: auto;
+    }
+
+    .quick_action button:hover {
+      background-color: #76bbff;
+      color: white;
+    }
+
+    .quick_action>div>div>img {
+      width: 60px;
+      height: 50px;
+      background-color: white;
+      /* padding: 10px; */
+      border-radius: 10px;
+      padding: 10px;
+      -o-object-fit: contain;
+      object-fit: contain;
+      margin-bottom: 5px;
+    }
+
+    .news_block ol,
+    .news_dataroom ol {
+      padding: 0 15px;
+    }
+
+    .news_block ol li,
+    .news_dataroom ol li {
+      margin: 10px 0;
+      max-width: 250px;
+      white-space: nowrap;
+      overflow: hidden;
+      list-style-position: inside;
+      -o-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+      background-color: #e1eefc;
+      padding: 4px;
+      color: #0057ad;
+      border-radius: 5px;
+      cursor: pointer;
+      height: 20px;
+    }
+
+    .quick_action2 {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      /* gap: 10px; */
+    }
+
+    .quick_action2>div {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      /* gap: 10px; */
+      border: 1px solid #3376b8;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .margin-top-10 {
+      margin-top: 10px;
+    }
+
+    .quick_action2>div>div>h2 {
+      color: #3376b8;
+      font-size: 18px;
+      line-height: 15px;
+    }
+
+    .quick_action2>div>div {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      text-align: start;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: start;
+    }
+
+    .quick_action2>div>img {
+      width: 60px;
+    }
+
+    .quick_action2 button {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      /* gap: 10px; */
+    }
+
+    .list-style-none {
+      list-style: none;
+    }
+
+    td.add1 {
+      background-color: #afd2f3;
+    }
+
+    td.add2 {
+      background-color: #fcccb1;
+    }
+
+    td.add3 {
+      background-color: #eef5c6;
+    }
+
+    td.add4 {
+      background-color: #ffb1b1;
+    }
+
+    td.add span {
+      font-size: 16px;
+      color: #0d509e;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header section -->
+  <div class="container">
+    <header class="header">
+      <img src="https://lustrous-buttercream-7631ed.netlify.app/img/logo.png" alt="Logo" class="brand" />
+      <div class="margin-left-5">
+        <h2>서울경찰청</h2>
+        <p>서울지방경찰청 초과근무 통합시스템</p>
+      </div>
+      <img src="https://lustrous-buttercream-7631ed.netlify.app/img/slogan.png" alt="Slogan"
+        class="slogan margin-left-5" />
+    </header>
+  </div>
+  <!-- /Header section -->
+
+  <!-- Navigation section -->
+  <div class="container">
+    <nav class="navbar">
+      <ul>
+        <li>
+          <a href>개인별 초과근무</a>
+        </li>
+        <li class="navbar_gap-ul">
+          <a href>초과근무 통계</a>
+        </li>
+        <li class="navbar_gap-ul">
+          <a href class="active">관리자 메뉴</a>
+        </li>
+        <li class="navbar_gap-ul">
+          <a href>공지사항</a>
+        </li>
+        <li class="navbar_gap-ul">
+          <a href>동원 명령서</a>
+        </li>
+        <li class="flex__end class=" navbar_gap-ul">
+          <a href>개발엔지니어님 반갑습니다</a>
+        </li>
+      </ul>
+      <a href="#" class="navbar_gap">로그아웃</a>
+    </nav>
+  </div>
+  <!-- /Navigation section -->
+
+  <!-- Content section -->
+  <div class="container">
+    <section class="content">
+      <!-- Main Content -->
+      <div class="content__content">
+        <!-- Main Content Header -->
+        <hr />
+        <div class="content__data">
+
+          <div class="calendar">
+            <div class="calendar-header">
+
+              <input type="month" id="monthPicker" />
+
+              <table class="month_info">
                 <thead>
                   <tr>
-                    <th>일요일</th>
-                    <th>월요일</th>
-                    <th>화요일</th>
-                    <th>수요일</th>
-                    <th>목요일</th>
-                    <th>금요일</th>
-                    <th>토요일</th>
+                    <th>시간외 근무시간</th>
+                    <th>야간 시간</th>
+                    <th>통일 시간</th>
                   </tr>
                 </thead>
-                <tbody id="calendarBody">
+                <tbody>
                   <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td class="add add1">
-                      <b>1</b> <br />
-                      <span>주간</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="add add2">
-                      <b>2</b> <br />
-                      <span>야간</span>
-                    </td>
-                    <td class="add add3">
-                      <b>3</b> <br />
-                      <span>비번</span>
-                    </td>
-                    <td class="add add4">
-                      <b>4</b> <br />
-                      <span>휴무</span>
-                    </td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                    <td>8</td>
-                  </tr>
-                  <tr>
-                    <td>9</td>
-                    <td>10</td>
-                    <td>11</td>
-                    <td>12</td>
-                    <td>13</td>
-                    <td>14</td>
-                    <td>15</td>
-                  </tr>
-
-                  <tr>
-                    <td>16</td>
-                    <td>17</td>
-                    <td>18</td>
-                    <td>19</td>
-                    <td>20</td>
-                    <td>21</td>
-                    <td>22</td>
-                  </tr>
-                  <tr>
-                    <td>23</td>
-                    <td>24</td>
-                    <td>25</td>
-                    <td>26</td>
-                    <td>27</td>
-                    <td>28</td>
-                    <td>29</td>
-                  </tr>
-                  <tr>
-                    <td>30</td>
-                    <td>31</td>
+                    <td>48시간</td>
+                    <td>12시간</td>
+                    <td>3일</td>
                   </tr>
                 </tbody>
               </table>
             </div>
 
-            <div class="content__info">
-              <div class="column">
-                <div class="news_block">
-                  <h2>공지시항</h2>
+            <table class="calendar_info">
+              <thead>
+                <tr>
+                  <th>일요일</th>
+                  <th>월요일</th>
+                  <th>화요일</th>
+                  <th>수요일</th>
+                  <th>목요일</th>
+                  <th>금요일</th>
+                  <th>토요일</th>
+                </tr>
+              </thead>
+              <tbody id="calendarBody">
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td class="add add1">
+                    <b>1</b> <br />
+                    <span>주간</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="add add2">
+                    <b>2</b> <br />
+                    <span>야간</span>
+                  </td>
+                  <td class="add add3">
+                    <b>3</b> <br />
+                    <span>비번</span>
+                  </td>
+                  <td class="add add4">
+                    <b>4</b> <br />
+                    <span>휴무</span>
+                  </td>
+                  <td>5</td>
+                  <td>6</td>
+                  <td>7</td>
+                  <td>8</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>10</td>
+                  <td>11</td>
+                  <td>12</td>
+                  <td>13</td>
+                  <td>14</td>
+                  <td>15</td>
+                </tr>
 
-                  <ol reversed>
-                    <li>000000000000000000000000000000000000000000</li>
-                    <li>000000000000000000000000000000000000000000</li>
-                    <li>★4월3일 10시~14시 긴급점검★</li>
-                    <li>25. 4. 1. new시스템 도입</li>
-                  </ol>
-                </div>
+                <tr>
+                  <td>16</td>
+                  <td>17</td>
+                  <td>18</td>
+                  <td>19</td>
+                  <td>20</td>
+                  <td>21</td>
+                  <td>22</td>
+                </tr>
+                <tr>
+                  <td>23</td>
+                  <td>24</td>
+                  <td>25</td>
+                  <td>26</td>
+                  <td>27</td>
+                  <td>28</td>
+                  <td>29</td>
+                </tr>
+                <tr>
+                  <td>30</td>
+                  <td>31</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
-                <div class="news_dataroom">
-                  <h2>자료실</h2>
+          <div class="content__info">
+            <div class="column">
+              <div class="news_block">
+                <h2>공지시항</h2>
 
-                  <ol reversed class="list-style-none">
-                    <li>: 2025 공무원 보수등의 업무지침.pdf</li>
-                    <li>: 경찰청 초과근무 운영지침.pdf</li>
-                    <li>: 국가공무원 복무 징계등의 예규.pdf</li>
-                  </ol>
-                </div>
+                <ol reversed>
+                  <li>000000000000000000000000000000000000000000</li>
+                  <li>000000000000000000000000000000000000000000</li>
+                  <li>★4월3일 10시~14시 긴급점검★</li>
+                  <li>25. 4. 1. new시스템 도입</li>
+                </ol>
               </div>
 
-              <div class="column">
-                <div class="quick_action">
-                  <h2>자주찾는 메뉴</h2>
+              <div class="news_dataroom">
+                <h2>자료실</h2>
+
+                <ol reversed class="list-style-none">
+                  <li>: 2025 공무원 보수등의 업무지침.pdf</li>
+                  <li>: 경찰청 초과근무 운영지침.pdf</li>
+                  <li>: 국가공무원 복무 징계등의 예규.pdf</li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="column margin-left-20">
+              <div class="quick_action">
+                <h2>자주찾는 메뉴</h2>
+                <div>
                   <div>
-                    <div>
-                      <img
-                        src="https://korean-police-123.netlify.app/png/1.png"
-                        alt="LOGO" />
-                      <button>
-                        <span>초과근무</span>
-                        <span>신청</span>
-                      </button>
-                    </div>
-                    <div>
-                      <img
-                        src="https://korean-police-123.netlify.app/png/2.png"
-                        alt="LOGO" />
-                      <button>
-                        <span>개인별</span>
-                        <span>통계</span>
-                      </button>
-                    </div>
-                    <div>
-                      <img
-                        src="https://korean-police-123.netlify.app/png/3.png"
-                        alt="LOGO" />
-                      <button>
-                        <span>근무상황</span>
-                        <span>관리</span>
-                      </button>
-                    </div>
+                    <img src="https://korean-police-123.netlify.app/png/1.png" alt="LOGO" />
+                    <button>
+                      <span>초과근무</span>
+                      <span>신청</span>
+                    </button>
+                  </div>
+                  <div class="margin-left-10">
+                    <img src="https://korean-police-123.netlify.app/png/2.png" alt="LOGO" />
+                    <button>
+                      <span>개인별</span>
+                      <span>통계</span>
+                    </button>
+                  </div>
+                  <div class="margin-left-10">
+                    <img src="https://korean-police-123.netlify.app/png/3.png" alt="LOGO" />
+                    <button>
+                      <span>근무상황</span>
+                      <span>관리</span>
+                    </button>
                   </div>
                 </div>
-                <div class="quick_action2">
+              </div>
+              <div class="quick_action2">
+                <div>
                   <div>
-                    <div>
-                      <h2>초과관리 시스템 문의</h2>
-                      <button>
-                        <span>바로가기</span>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          fill="currentColor"
-                          class="bi bi-arrow-right"
-                          viewBox="0 0 16 16">
-                          <path
-                            fill-rule="evenodd"
-                            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
-                        </svg>
-                      </button>
-                    </div>
-                    <img
-                      src="https://korean-police-123.netlify.app/png/4.png"
-                      alt="LOGO" />
+                    <h2>초과관리 시스템 문의</h2>
+                    <button>
+                      <span>바로가기</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                          d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                      </svg>
+                    </button>
                   </div>
+                  <img src="https://korean-police-123.netlify.app/png/4.png" alt="LOGO" />
+                </div>
 
+                <div class="margin-top-10">
                   <div>
-                    <div>
-                      <h2>담당자 간 소통 창구</h2>
-                      <button>
-                        <span>바로가기</span>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          fill="currentColor"
-                          class="bi bi-arrow-right"
-                          viewBox="0 0 16 16">
-                          <path
-                            fill-rule="evenodd"
-                            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
-                        </svg>
-                      </button>
-                    </div>
-                    <img
-                      src="https://korean-police-123.netlify.app/png/4.png"
-                      alt="LOGO" />
+                    <h2>담당자 간 소통 창구</h2>
+                    <button>
+                      <span>바로가기</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                          d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                      </svg>
+                    </button>
                   </div>
+                  <img src="https://korean-police-123.netlify.app/png/4.png" alt="LOGO" />
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <!-- Main Content -->
-      </section>
-    </div>
-    <!-- /Content section -->
+      </div>
+      <!-- Main Content -->
+    </section>
+  </div>
+  <!-- /Content section -->
 
-    <!-- JS -->
-    <!-- <script>
+  <!-- JS -->
+  <!-- <script>
       const calendarBody = document.getElementById("calendarBody");
       const monthPicker = document.getElementById("monthPicker");
 
@@ -710,5 +840,6 @@
       ).padStart(2, "0")}`;
       renderCalendar(currentDate);
     </script> -->
-  </body>
+</body>
+
 </html>
